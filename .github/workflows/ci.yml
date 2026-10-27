@@ -26,7 +26,7 @@ jobs:
 
       - name: Siapkan lingkungan
         run: |
-          copy .env.example .env
+          cp .env.example .env
           php artisan key:generate
           touch database/database.sqlite
 
@@ -35,6 +35,9 @@ jobs:
 
       - name: Migrasi dan seeder dari basis data kosong
         run: php artisan migrate:fresh --seed --force
+
+      - name: Buku besar seimbang
+        run: php artisan lapak:periksa-buku
 
       - name: Pengujian
         run: php vendor/bin/pest --ci
