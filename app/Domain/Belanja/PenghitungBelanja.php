@@ -12,8 +12,8 @@ final readonly class PenghitungBelanja
     public function __construct(private int $komisiPersen) {}
 
     /**
-     * @param list<BarisBelanja> $baris
-     * @param array<int, array{nama: string, ongkir: Uang}> $toko
+     * @param  list<BarisBelanja>  $baris
+     * @param  array<int, array{nama: string, ongkir: Uang}>  $toko
      * @return list<RincianToko>
      */
     public function hitung(array $baris, array $toko): array
@@ -50,7 +50,7 @@ final readonly class PenghitungBelanja
     }
 
     /**
-     * @param list<RincianToko> $rincian
+     * @param  list<RincianToko>  $rincian
      */
     public static function totalBayar(array $rincian): Uang
     {

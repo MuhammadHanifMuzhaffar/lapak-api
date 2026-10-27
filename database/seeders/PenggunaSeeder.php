@@ -26,6 +26,7 @@ class PenggunaSeeder extends Seeder
     {
         if (app()->isProduction()) {
             $this->command?->warn('PenggunaSeeder dilewati: akun contoh tidak boleh ada di produksi.');
+
             return;
         }
 

@@ -63,7 +63,7 @@ final class PenanganGalatApi
     }
 
     /**
-     * @param array<string, mixed> $rincian
+     * @param  array<string, mixed>  $rincian
      */
     private static function bentuk(
         int $status,

@@ -55,7 +55,7 @@ final class Produk extends Model
      * LP-4: produk tampil hanya bila berstatus aktif DAN tokonya aktif.
      * Seluruh pintu publik wajib lewat scope ini; jangan menulis ulang syaratnya di controller.
      *
-     * @param Builder<Produk> $kueri
+     * @param  Builder<Produk>  $kueri
      */
     public function scopeTampil(Builder $kueri): void
     {
@@ -64,8 +64,8 @@ final class Produk extends Model
     }
 
     /**
-     * @param Builder<Produk> $kueri
-     * @param array<string, mixed> $saringan hasil validasi KatalogRequest
+     * @param  Builder<Produk>  $kueri
+     * @param  array<string, mixed>  $saringan  hasil validasi KatalogRequest
      */
     public function scopeSaring(Builder $kueri, array $saringan): void
     {
@@ -88,7 +88,7 @@ final class Produk extends Model
     /**
      * Pengurutan memakai daftar putih. Nama kolom tidak pernah diambil dari masukan klien.
      *
-     * @param Builder<Produk> $kueri
+     * @param  Builder<Produk>  $kueri
      */
     public function scopeUrut(Builder $kueri, ?string $urut): void
     {
